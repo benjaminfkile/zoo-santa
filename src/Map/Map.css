@@ -1,0 +1,46 @@
+.Guages{
+    position: absolute;
+    display: flex;
+    top: 105px;
+    left: -5px;
+    width: 100vw;
+    z-index: 1000;
+}
+
+.Guages img{
+    width: 50px;
+    height: 50px;
+}
+
+.Guages p{
+    margin-top: 18px;
+    margin-left: -8px;
+}
+
+#bearing-container, #speed-container, #altitude-container, #accuracy-container{
+    display: flex;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+}
+
+#speed-container{
+    position: absolute;
+    top: 40px;
+    left: 2.5px;
+}
+
+#altitude-container{
+    position: absolute;
+    top: 80px;
+    left: 2.5px;  
+}
+#accuracy-container{
+    position: absolute;
+    top: 120px;
+    left: 2.5px;  
+}
+
+
+
+
+
