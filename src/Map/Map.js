@@ -79,14 +79,14 @@ class Map extends Component {
             <div className="Map">
                 <Snow />
                 {!this.state.aircraft && <GoogleMap
-                    center={{ lat: 46.8721, lng: -113.9940 }}
+                    defaultCenter={{ lat: 46.8721, lng: -113.9940 }}
                     defaultOptions={this.defaultMapOptions}
                 >
                     <>
                     </>
                 </GoogleMap>}
                 {this.state.aircraft && <GoogleMap
-                    center={{ lat: Number(this.state.lat), lng: Number(this.state.lng) }}
+                    defaultCenter={{ lat: Number(this.state.lat), lng: Number(this.state.lng) }}
                     defaultOptions={this.defaultMapOptions}
                 >
                     <>
