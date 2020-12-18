@@ -12,7 +12,7 @@ class Sponsors extends Component {
     }
 
     componentDidMount(){
-        setInterval(this.switchSponsor, 3000)
+        setInterval(this.switchSponsor, 8000)
     }
 
     switchSponsor = () =>{

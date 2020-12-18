@@ -67,7 +67,6 @@ class Map extends Component {
 
     render = () => {
 
-
         let aircraftMarker = new window.google.maps.MarkerImage(
             './res/sleigh.png',
             null,
