@@ -78,7 +78,6 @@ class EndShow extends Component {
                         <li>Beuna Vista Community Inc</li>
                         <li>Union Club Bar</li>
                         <li>Eclipse Bakery</li>
-                        <li>Chris Harvey (Location Data)</li>
                         <li>Ben Kile (Site Developer)</li>
                     </ul>
                 </div>
