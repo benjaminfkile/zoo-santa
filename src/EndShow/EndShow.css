@@ -16,6 +16,20 @@
 .End_Show h2{
     font-size: 20px;
 }
+
+.Sponsor_Endshow{
+    /* background-color: black; */
+    margin-top: 10px;
+    width: 50vw;
+    height: 10vh;
+    margin-left: 25vw;
+    /* border-radius: 2px; */
+}
+.Sponsor_Endshow img{
+    width: 50vw;
+    height: 10vh;
+}
+
 .Col_1, .Col_2, .Col_3, .Col_4{
     width: 100vw;
 }
@@ -34,5 +48,34 @@ a{
 
 }
 .Contact{
-    margin-top: 20px;
+    /* margin-top: 20px; */
+}
+
+@media (orientation: landscape) {
+    .End_Show h1{
+        margin-top: 50px;
+    }
+    .End_Show p{
+        padding-left: 20vw;
+        padding-right: 20vw;
+        font-size: 14px;
+    }
+
+    .Route img{
+        width: 30vw;
+    }
+  
+  .Sponsor_Endshow img{
+    width: 10vw;
+    height: 10vh;
+}
+.Sponsor_Endshow{
+    margin-top: 30px;
+    width: 10vw;
+    height: 10vh;
+    margin-left: 45vw;
+    border-radius: 2px;
+}
+
+
 }

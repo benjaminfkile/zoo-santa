@@ -82,7 +82,7 @@ class EndShow extends Component {
                         <li>Ben Kile (Site Developer)</li>
                     </ul>
                 </div>
-                <div className="Sponsor_Preshow">
+                <div className="Sponsor_Endshow">
                     <img src={SponsorStore[this.state.sponsor].img} alt={SponsorStore[this.state.sponsor].name} onClick={() => this.openPage(this.state.sponsor)}></img>
                 </div>
                 <div className="Contact">
