@@ -4,10 +4,11 @@ import './Sponsors.css'
 
 class Sponsors extends Component {
 
+    sponsorDex = 0
     constructor(props) {
         super(props);
         this.state = {
-            sponsorDex: 0
+            sponsor: 0
         }
     }
 
@@ -16,7 +17,12 @@ class Sponsors extends Component {
     }
 
     switchSponsor = () =>{
-        this.setState({sponsorDex: Math.floor(Math.random() * (SponsorStore.length - 0) + 0)})
+        this.sponsorDex += 1
+        if(this.sponsorDex > SponsorStore.length -1){
+            this.sponsorDex = 0
+        }
+        this.setState({sponsor: this.sponsorDex})
+        console.log(this.sponsorDex)
     }
 
     openPage = (args) => {
@@ -26,7 +32,7 @@ class Sponsors extends Component {
     render() {
         return (
             <div className="Sponsors">
-                <img src={SponsorStore[this.state.sponsorDex].img} alt={SponsorStore[this.state.sponsorDex].name} onClick={() => this.openPage(this.state.sponsorDex)}></img>
+                <img src={SponsorStore[this.state.sponsor].img} alt={SponsorStore[this.state.sponsor].name} onClick={() => this.openPage(this.state.sponsor)}></img>
             </div>
         )
     }
