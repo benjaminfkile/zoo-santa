@@ -31,11 +31,25 @@ class EndShow extends Component {
                 <div className="Col_3">
                     <ul>
                         <li>Trail West Bank</li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>First Interstate Bank</li>
+                        <li>Clover Creative</li>
+                        <li>Transport Equipment</li>
+                        <li>Futurity Welding Services</li>
                     </ul>
+                </div>
+                <div className="Col_4">
+                    <ul>
+                        <li>Graybeal Heating and Air Conditioning</li>
+                        <li>Beuna Vista Community Inc</li>
+                        <li>Union Club Bar</li>
+                        <li>Eclipse Bakery</li>
+                        <li>Chris Harvey (Location Data)</li>
+                        <li>Ben Kile (Site Developer)</li>
+                    </ul>
+                </div>
+                <div className="Contact">
+                <a href="https://www.facebook.com/groups/374773957140495/" target="_blank" rel="noopener noreferrer"><img id="fb" src="./res/fb.png" alt="Facebook"/> &nbsp;</a>
+                <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=santaflyover@gmail.com" target="_blank" rel="noopener noreferrer"><img id="mail" src="./res/mail.png" alt="email"/> &nbsp;</a>
                 </div>
             </div>
         )

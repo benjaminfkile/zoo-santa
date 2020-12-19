@@ -47,6 +47,7 @@ class App extends Component {
     } catch {
       console.log('failed to set state')
     }
+    console.log(Aircraft[0].data)
   }
 
   render() {
