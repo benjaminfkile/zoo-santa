@@ -13,8 +13,8 @@ class App extends Component {
     super(props);
     this.state = {
       aircraft: true,
-      showmode: "runshow",
-      preshowMsg: null
+      showmode: "preshow",
+      preshowMsg: ""
     }
   }
 
@@ -58,7 +58,9 @@ class App extends Component {
           <Map />
         </div>}
         {this.state.showmode === "preshow" && <div className="Preshow_Wrapper">
-          <Preshow />
+          <Preshow
+            message={this.state.preshowMsg}
+          />
         </div>}
         {this.state.showmode === "endshow" && <div className="Endshow_Wrapper">
           <EndShow />
