@@ -16,7 +16,7 @@ class EndShow extends Component {
     componentDidMount() {
         this.endshowMounted = true;
         this.updateInterval = setInterval(this.update, 1000)
-        setInterval(this.switchSponsor, 800)
+        setInterval(this.switchSponsor, 8000)
     }
 
     componentWillUnmount() {
