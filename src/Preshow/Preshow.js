@@ -27,7 +27,7 @@ class Preshow extends Component {
             this.setState({
                 message: this.props.message
             })
-            console.log(this.state.message)
+            console.log(this.props.message)
         } catch {
             console.log('failed to set state')
         }
@@ -42,8 +42,8 @@ class Preshow extends Component {
                 <h2>
                     Santa's Status
                 </h2>
-
-                <p>{this.state.message}</p>
+                
+                <p dangerouslySetInnerHTML={{ __html: this.state.message }}></p>
             </div>
         )
     }
