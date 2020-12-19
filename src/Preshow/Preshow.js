@@ -67,6 +67,7 @@ class Preshow extends Component {
                 <div className="Route">
                     <img src="./res/route.png" alt="route" id="route"></img>
                 </div>
+                <p>Sponsored by</p>
                 <div className="Sponsor_Preshow">
                     <img src={SponsorStore[this.state.sponsor].img} alt={SponsorStore[this.state.sponsor].name} onClick={() => this.openPage(this.state.sponsor)}></img>
                 </div>

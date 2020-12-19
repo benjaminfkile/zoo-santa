@@ -29,13 +29,13 @@
 }
 .Sponsor_Preshow{
     background-color: black;
-    width: 33vw;
+    width: 50vw;
     height: 10vh;
-    margin-left: 33vw;
+    margin-left: 25vw;
     border-radius: 2px;
 }
 .Sponsor_Preshow img{
-    width: 33vw;
+    width: 50vw;
     height: 10vh;
 }
 
