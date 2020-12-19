@@ -30,7 +30,7 @@ class Map extends Component {
             bearing: "NE (44.966)",
             alititude: "3113 ft",
             speed: "0.30 mph",
-            accuracy: "97.1 ft"
+            accuracy: "97.1 ft",
         }
     }
 
@@ -47,22 +47,27 @@ class Map extends Component {
     listen4DB = () => {
         if (Aircraft[0].data) {
             this.setState({ aircraft: true })
-            this.updateInterval = setInterval(this.updateCoords, 500)
+            this.updateCoords()
+            this.updateInterval = setInterval(this.updateCoords, 5000)
             clearInterval(this.dbInterval)
         }
     }
 
     updateCoords = () => {
-        this.setState(
-            {
-                lat: Number(Aircraft[0].data.getElementsByTagName("gps_lat")[0].innerHTML),
-                lng: Number(Aircraft[0].data.getElementsByTagName("gps_lon")[0].innerHTML),
-                bearing: Aircraft[0].data.getElementsByTagName("gps_bear")[0].innerHTML,
-                alititude: Aircraft[0].data.getElementsByTagName("gps_alt")[0].innerHTML,
-                speed: Aircraft[0].data.getElementsByTagName("gps_speed")[0].innerHTML,
-                accuracy: Aircraft[0].data.getElementsByTagName("gps_accuracy")[0].innerHTML
-            }
-        )
+        try {
+            this.setState(
+                {
+                    lat: Number(Aircraft[0].data.getElementsByTagName("gps_lat")[0].innerHTML),
+                    lng: Number(Aircraft[0].data.getElementsByTagName("gps_lon")[0].innerHTML),
+                    bearing: Aircraft[0].data.getElementsByTagName("gps_bear")[0].innerHTML,
+                    alititude: Aircraft[0].data.getElementsByTagName("gps_alt")[0].innerHTML,
+                    speed: Aircraft[0].data.getElementsByTagName("gps_speed")[0].innerHTML,
+                    accuracy: Aircraft[0].data.getElementsByTagName("gps_accuracy")[0].innerHTML,
+                }
+            )
+        } catch {
+            console.log('failed to set state')
+        }
     }
 
     render = () => {

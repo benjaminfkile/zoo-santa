@@ -8,12 +8,12 @@ function monitorCraft() {
         .then(res => res.text())
         .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
         .then(data => { Aircraft.unshift({ data: data }) })
-        .catch(() => alert("blocked by browser"))
+        .catch(() => console.log('failed to fetch'))
 }
 
 setInterval(function () {
     monitorCraft()
-}, 10000);
+}, 5000);
 
 monitorCraft()
 
