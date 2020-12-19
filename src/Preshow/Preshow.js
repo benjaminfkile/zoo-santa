@@ -65,10 +65,10 @@ class Preshow extends Component {
                     <p dangerouslySetInnerHTML={{ __html: this.state.message }}></p>
                 </div>
                 <div className="Route">
-                    <img src="./res/route.png" id="route"></img>
+                    <img src="./res/route.png" alt="route" id="route"></img>
                 </div>
                 <div className="Sponsor_Preshow">
-                    <img src={SponsorStore[this.state.sponsor].img} alt={SponsorStore[this.state.sponsor].name} alt="" onClick={() => this.openPage(this.state.sponsor)}></img>
+                    <img src={SponsorStore[this.state.sponsor].img} alt={SponsorStore[this.state.sponsor].name} onClick={() => this.openPage(this.state.sponsor)}></img>
                 </div>
             </div>
         )
