@@ -1,9 +1,9 @@
 let Sponsors = [
-    // {
-    //     name: 'clover creative',
-    //     img: './res/helpers/clover.png',
-    //     url: null
-    // },
+    {
+        name: 'clover creative',
+        img: './res/helpers/clover.png',
+        url: null
+    },
     {
         name: 'D&G Crane service',
         img: './res/helpers/d-g-crane.png',
@@ -89,11 +89,11 @@ let Sponsors = [
         img: './res/helpers/buenaVista.png',
         url: 'http://www.buenavista.coop/'
     },
-    // {
-    //     name: 'WMBT',
-    //     img: null,
-    //     url: null
-    // },
+    {
+        name: 'WMBT',
+        img: null,
+        url: null
+    },
 ]
 
 export default Sponsors

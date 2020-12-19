@@ -13,7 +13,7 @@ class App extends Component {
     super(props);
     this.state = {
       aircraft: true,
-      showmode: "endshow",
+      showmode: "preshow",
       preshowMsg: ""
     }
   }

@@ -25,7 +25,9 @@ class Sponsors extends Component {
     }
 
     openPage = (args) => {
-        window.open(SponsorStore[args].url, '_blank')
+        if(args){
+            window.open(SponsorStore[args].url, '_blank')
+        }
     }
 
     render() {
