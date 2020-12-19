@@ -13,7 +13,7 @@ class App extends Component {
     super(props);
     this.state = {
       aircraft: true,
-      showmode: "runshow",
+      showmode: "preshow",
       preshowMsg: ""
     }
   }
@@ -41,7 +41,7 @@ class App extends Component {
   update = () => {
     try {
       this.setState({
-        // showmode: Aircraft[0].data.getElementsByTagName("showmode")[0].innerHTML,
+        showmode: Aircraft[0].data.getElementsByTagName("showmode")[0].innerHTML,
         preshowMsg: Aircraft[0].data.getElementsByTagName("preshow_msg")[0].innerHTML
       })
     } catch {
