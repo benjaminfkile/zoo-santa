@@ -1,7 +1,40 @@
 import React, { Component } from 'react'
+import SponsorStore from '../SponsorStore'
 import './EndShow.css'
 
 class EndShow extends Component {
+
+    endshowMounted = false
+    sponsorDex = 0
+    constructor(props) {
+        super(props);
+        this.state = {
+            sponsor: 0
+        }
+    }
+
+    componentDidMount() {
+        this.endshowMounted = true;
+        this.updateInterval = setInterval(this.update, 1000)
+        setInterval(this.switchSponsor, 8000)
+    }
+
+    componentWillUnmount() {
+        this.endshowMounted = false;
+        clearInterval(this.updateInterval)
+    }
+
+    switchSponsor = () => {
+        this.sponsorDex += 1
+        if (this.sponsorDex > SponsorStore.length - 1) {
+            this.sponsorDex = 0
+        }
+        this.setState({ sponsor: this.sponsorDex })
+    }
+
+    openPage = (args) => {
+        window.open(SponsorStore[args].url, '_blank')
+    }
 
     render() {
         return (
@@ -46,6 +79,9 @@ class EndShow extends Component {
                         <li>Chris Harvey (Location Data)</li>
                         <li>Ben Kile (Site Developer)</li>
                     </ul>
+                </div>
+                <div className="Sponsor_Preshow">
+                    <img src={SponsorStore[this.state.sponsor].img} alt={SponsorStore[this.state.sponsor].name} onClick={() => this.openPage(this.state.sponsor)}></img>
                 </div>
                 <div className="Contact">
                 <a href="https://www.facebook.com/groups/374773957140495/" target="_blank" rel="noopener noreferrer"><img id="fb" src="./res/fb.png" alt="Facebook"/> &nbsp;</a>
