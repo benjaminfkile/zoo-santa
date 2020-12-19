@@ -41,8 +41,9 @@ class EndShow extends Component {
     render() {
         return (
             <div className="End_Show">
-                <h1>Santa has left Missoula!</h1>
-                <h2>Thank you to all our sponsors and donors.</h2>
+                <h1>Missoula Santa Tracker</h1>
+                <h2>Santa has left Missoula!</h2>
+                <h3>Thank you to all our sponsors and donors.</h3>
                 <div className="Col_1">
                     <ul>
                         <li>Missoula Downtown Foundation</li>
