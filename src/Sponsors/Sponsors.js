@@ -22,7 +22,6 @@ class Sponsors extends Component {
             this.sponsorDex = 0
         }
         this.setState({sponsor: this.sponsorDex})
-        console.log(this.sponsorDex)
     }
 
     openPage = (args) => {
@@ -32,7 +31,7 @@ class Sponsors extends Component {
     render() {
         return (
             <div className="Sponsors">
-                <img src={SponsorStore[this.state.sponsor].img} alt={SponsorStore[this.state.sponsor].name} onClick={() => this.openPage(this.state.sponsor)}></img>
+                <img src={SponsorStore[this.state.sponsor].img} alt={SponsorStore[this.state.sponsor].name} alt="" onClick={() => this.openPage(this.state.sponsor)}></img>
             </div>
         )
     }
