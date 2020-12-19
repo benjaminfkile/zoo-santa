@@ -91,7 +91,7 @@ let Sponsors = [
     },
     {
         name: 'WMBT',
-        img: null,
+        img: './res/helpers/wmbt.png',
         url: null
     },
 ]
