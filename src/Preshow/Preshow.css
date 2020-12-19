@@ -40,26 +40,28 @@
 }
 
 @media (orientation: landscape) {
-    .Preshow{
-        display: flex;
+    .Preshow p{
+        padding-left: 30vw;
+        padding-right: 30vw;
+        font-size: 14px;
+        line-height: 20px; /* 4px +12px + 4px */
     }
-    .Status{
-        position: absolute;
-        width: 50vw;
-        height: 100vh;
-        left: 0vw;
-        top: 0vh;
-    }
-    .Route{
-        position: absolute;
-        width: 50vw;
-        height: 100vh;
-        left: 50vw;
-        top: 0vh;
-    }
+
     .Route img{
-        width: 50vw;
+        width: 30vw;
     }
-  }
+  
+  .Sponsor_Preshow img{
+    width: 10vw;
+    height: 10vh;
+}
+.Sponsor_Preshow{
+    background-color: black;
+    width: 10vw;
+    height: 10vh;
+    margin-left: 45vw;
+    border-radius: 2px;
+}
 
 
+}

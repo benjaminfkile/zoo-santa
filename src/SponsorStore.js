@@ -1,9 +1,4 @@
 let Sponsors = [
-    {
-        name: 'buena vista',
-        img: './res/helpers/buenaVista.png',
-        url: 'http://www.buenavista.coop/'
-    },
     // {
     //     name: 'clover creative',
     //     img: './res/helpers/clover.png',
@@ -88,6 +83,11 @@ let Sponsors = [
         name: 'Union Club',
         img: './res/helpers/Union-Club-Logo.png',
         url: 'https://unionclubbarandgrill.com/'
+    },
+    {
+        name: 'buena vista',
+        img: './res/helpers/buenaVista.png',
+        url: 'http://www.buenavista.coop/'
     },
     // {
     //     name: 'WMBT',

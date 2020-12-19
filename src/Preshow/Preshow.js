@@ -12,7 +12,6 @@ class Preshow extends Component {
         this.state = {
             message: "",
             sponsor: 0
-
         }
     }
 
