@@ -54,9 +54,7 @@ class Preshow extends Component {
 
         return (
             <div className="Preshow">
-
                 <Snow />
-
                 <div className="Status">
                     <h1>
                         Missoula Santa Tracker
