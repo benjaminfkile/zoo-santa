@@ -1,21 +1,43 @@
 .Sponsors{
     position: absolute;
-    top: 0px;
-    width: 205px;
-    height: 105px;
+    top: 88vh;
+    width: 40vw;
+    height: 8vh;
+    left: 30vw;
     z-index: 10050;
-    border-style: solid;
+    /* border-style: solid;
     border-width: 1px;
     border-color: rgb(133, 133, 133);
     border-radius: 2px;
-    background-color: black;
+    background-color: black; */
 }
 .Sponsors img{
     display: block;
     cursor: pointer;
-    margin-top: 2px;
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
-    height: 100px;
+    width: 40vw;
+    height: 8vh;
+}
+
+@media (orientation: landscape) {
+
+    .Sponsors{
+        position: absolute;
+        top: 88vh;
+        width: 10vw;
+        height: 8vh;
+        left: 45vw;
+        z-index: 10050;
+        /* border-style: solid;
+        border-width: 1px;
+        border-color: rgb(133, 133, 133);
+        border-radius: 2px;
+        background-color: black; */
+    }
+    .Sponsors img{
+        width: 10vw;
+
+    }
+
 }
