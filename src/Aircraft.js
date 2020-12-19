@@ -13,7 +13,7 @@ function monitorCraft() {
 
 setInterval(function () {
     monitorCraft()
-}, 5000);
+}, 10000);
 
 monitorCraft()
 
