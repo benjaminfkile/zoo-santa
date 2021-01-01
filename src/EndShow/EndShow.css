@@ -31,6 +31,7 @@
 .Sponsor_Endshow img{
     width: 50vw;
     height: 10vh;
+    cursor: pointer;
 }
 
 .Col_1, .Col_2, .Col_3, .Col_4{
