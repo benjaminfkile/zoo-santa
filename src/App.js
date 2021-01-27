@@ -21,7 +21,7 @@ class App extends Component {
   componentDidMount() {
     this.appMounted = true;
     this.dbInterval = setInterval(this.listen4DB, 1000)
-    this.updateInterval = setInterval(this.update, 1000)
+    // this.updateInterval = setInterval(this.update, 1000)
   }
 
   componentWillUnmount() {
