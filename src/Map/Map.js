@@ -54,15 +54,16 @@ class Map extends Component {
     }
 
     updateCoords = () => {
+        console.log(Aircraft[0].data[0])
         try {
             this.setState(
                 {
-                    lat: Number(Aircraft[0].data.getElementsByTagName("gps_lat")[0].innerHTML),
-                    lng: Number(Aircraft[0].data.getElementsByTagName("gps_lon")[0].innerHTML),
-                    bearing: Aircraft[0].data.getElementsByTagName("gps_bear")[0].innerHTML,
-                    alititude: Aircraft[0].data.getElementsByTagName("gps_alt")[0].innerHTML,
-                    speed: Aircraft[0].data.getElementsByTagName("gps_speed")[0].innerHTML,
-                    accuracy: Aircraft[0].data.getElementsByTagName("gps_accuracy")[0].innerHTML,
+                    lat: Number(Aircraft[0].data[0].lat),
+                    lng: Number(Aircraft[0].data[0].lon),
+                    bearing: Aircraft[0].data[0].bear,
+                    alititude: Aircraft[0].data[0].alt,
+                    speed: Aircraft[0].data[0].speed,
+                    accuracy: Aircraft[0].data[0].accuracy,
                 }
             )
         } catch {

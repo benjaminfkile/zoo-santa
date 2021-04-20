@@ -13,7 +13,7 @@ class App extends Component {
     super(props);
     this.state = {
       aircraft: true,
-      showmode: "endshow",
+      showmode: "runshow",
       preshowMsg: ""
     }
   }
@@ -32,8 +32,8 @@ class App extends Component {
   listen4DB = () => {
     if (Aircraft[0].data) {
       this.setState({ aircraft: true })
-      this.update()
-      this.updateInterval = setInterval(this.update, 1000)
+      // this.update()
+      // this.updateInterval = setInterval(this.update, 1000)
       clearInterval(this.dbInterval)
     }
   }

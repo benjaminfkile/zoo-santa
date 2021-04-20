@@ -1,20 +1,20 @@
-// import ApiStore from './ApiStore'
+import ApiStore from './ApiStore'
 
 let Aircraft = [{ data: null }]
 
-// function monitorCraft() {
+function monitorCraft() {
 
-//     fetch(ApiStore + '/api/santa')
-//         .then(res => res.text())
-//         .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
-//         .then(data => { Aircraft.unshift({ data: data }) })
-//         .catch(() => console.log('failed to fetch'))
-// }
+    fetch(ApiStore + '/api/gps-data')
+    .then(response => response.json())
+    .then(data => {
+        Aircraft[0].data = data
+    })
+}
 
-// setInterval(function () {
-//     monitorCraft()
-// }, 10000);
+setInterval(function () {
+    monitorCraft()
+}, 1000);
 
-// monitorCraft()
+monitorCraft()
 
 export default Aircraft
