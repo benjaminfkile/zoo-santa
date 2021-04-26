@@ -17,7 +17,6 @@ class Map extends Component {
         streetViewControl: false,
         gestureHandling: 'greedy',
         zoom: 11,
-        minZoom: 6,
         maxZoom: 15
     };
 
@@ -45,7 +44,7 @@ class Map extends Component {
     }
 
     listen4DB = () => {
-        if (Aircraft[0].data) {
+        if (Aircraft.lat) {
             this.setState({ aircraft: true })
             this.updateCoords()
             this.updateInterval = setInterval(this.updateCoords, 5000)
@@ -54,16 +53,15 @@ class Map extends Component {
     }
 
     updateCoords = () => {
-        console.log(Aircraft[0].data[0])
+        console.log(Aircraft)
         try {
             this.setState(
                 {
-                    lat: Number(Aircraft[0].data[0].lat),
-                    lng: Number(Aircraft[0].data[0].lon),
-                    bearing: Aircraft[0].data[0].bear,
-                    alititude: Aircraft[0].data[0].alt,
-                    speed: Aircraft[0].data[0].speed,
-                    accuracy: Aircraft[0].data[0].accuracy,
+                    lat: Number(Aircraft.lat),
+                    lng: Number(Aircraft.lon),
+                    bearing: Aircraft.bear,
+                    alititude: Aircraft.alt,
+                    speed: Aircraft.speed,
                 }
             )
         } catch {
@@ -72,6 +70,8 @@ class Map extends Component {
     }
 
     render = () => {
+
+        console.log(Aircraft)
 
         let aircraftMarker = new window.google.maps.MarkerImage(
             './res/sleigh.png',

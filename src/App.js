@@ -30,7 +30,7 @@ class App extends Component {
   }
 
   listen4DB = () => {
-    if (Aircraft[0].data) {
+    if (Aircraft.lat) {
       this.setState({ aircraft: true })
       // this.update()
       // this.updateInterval = setInterval(this.update, 1000)
@@ -39,14 +39,7 @@ class App extends Component {
   }
 
   update = () => {
-    try {
-      this.setState({
-        showmode: Aircraft[0].data.getElementsByTagName("showmode")[0].innerHTML,
-        preshowMsg: Aircraft[0].data.getElementsByTagName("preshow_msg")[0].innerHTML
-      })
-    } catch {
-      console.log('failed to set state')
-    }
+
   }
 
   render() {
