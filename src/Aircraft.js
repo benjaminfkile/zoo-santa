@@ -76,6 +76,8 @@ function DecodeData(data) {
         case 2:
             NewMode = "end-show";
             break;
+        default:
+        // do nothing
     }
     Aircraft.mode = NewMode
 }
