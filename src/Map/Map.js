@@ -24,12 +24,12 @@ class Map extends Component {
         super(props);
         this.state = {
             aircraft: true,
-            lat: 46.91569,
-            lng: -114.08781,
-            bearing: "NE (44.966)",
-            alititude: "3113 ft",
-            speed: "0.30 mph",
-            accuracy: "97.1 ft",
+            lat: 46.9042156,
+            lng: -114.0423713,
+            bearing: "",
+            alititude: "",
+            speed: "",
+            accuracy: "",
         }
     }
 
@@ -44,24 +44,23 @@ class Map extends Component {
     }
 
     listen4DB = () => {
-        if (Aircraft.lat) {
+        if (Aircraft[0].lat) {
             this.setState({ aircraft: true })
             this.updateCoords()
-            this.updateInterval = setInterval(this.updateCoords, 5000)
+            this.updateInterval = setInterval(this.updateCoords, 3000)
             clearInterval(this.dbInterval)
         }
     }
 
     updateCoords = () => {
-        console.log(Aircraft)
         try {
             this.setState(
                 {
-                    lat: Number(Aircraft.lat),
-                    lng: Number(Aircraft.lon),
-                    bearing: Aircraft.bear,
-                    alititude: Aircraft.alt,
-                    speed: Aircraft.speed,
+                    lat: Number(Aircraft[0].lat),
+                    lng: Number(Aircraft[0].lng),
+                    bearing: Aircraft[0].bear.split("+").join(" "),
+                    alititude: Aircraft[0].alt.split("+").join(" "),
+                    speed: Aircraft[0].speed.split("+").join(" "),
                 }
             )
         } catch {
@@ -70,8 +69,6 @@ class Map extends Component {
     }
 
     render = () => {
-
-        console.log(Aircraft)
 
         let aircraftMarker = new window.google.maps.MarkerImage(
             './res/sleigh.png',
@@ -84,7 +81,7 @@ class Map extends Component {
             <div className="Map">
                 <Snow />
                 {!this.state.aircraft && <GoogleMap
-                    defaultCenter={{ lat: 46.8721, lng: -113.9940 }}
+                    defaultCenter={{ lat: this.state.lng.lat, lng: this.state.lng  }}
                     defaultOptions={this.defaultMapOptions}
                 >
                     <>
@@ -113,10 +110,6 @@ class Map extends Component {
                     <div id='speed-container'>
                         <img src='/res/speed.png' alt='speed'></img>
                         {this.state.speed && <p>{this.state.speed}</p>}
-                    </div>
-                    <div id='accuracy-container'>
-                        <img src='/res/accuracy.png' alt='accuracy'></img>
-                        {this.state.accuracy && <p>{this.state.accuracy}</p>}
                     </div>
                 </div>}
             </div>
